@@ -1,0 +1,94 @@
+Specification base set to http://www.schema.org
+Using Version 7.03
+Found http://www.schema.org/ImageObject
+ImageObject: found 117 properties
+Specification base set to http://www.schema.org
+Using Version 7.03
+Found http://www.schema.org/Organization
+Organization: found 63 properties
+Specification base set to http://www.schema.org
+Using Version 7.03
+Found http://www.schema.org/Brand
+Brand: found 16 properties
+Specification base set to http://www.schema.org
+Using Version 7.03
+Found http://www.schema.org/EngineSpecification
+EngineSpecification: found 13 properties
+Specification base set to http://www.schema.org
+Using Version 7.03
+Found http://www.schema.org/AggregateRating
+AggregateRating: found 20 properties
+Specification base set to http://www.schema.org
+Using Version 7.03
+Found http://www.schema.org/QuantitativeValue
+QuantitativeValue: found 19 properties
+Specification base set to http://www.schema.org
+Using Version 7.03
+Found http://www.schema.org/PropertyValue
+PropertyValue: found 19 properties
+Specification base set to http://www.schema.org
+Using Version 7.03
+Found http://www.schema.org/PropertyValue
+PropertyValue: found 19 properties
+Specification base set to http://www.schema.org
+Using Version 7.03
+Found http://www.schema.org/PropertyValue
+PropertyValue: found 19 properties
+Specification base set to http://www.schema.org
+Using Version 7.03
+Found http://www.schema.org/PropertyValue
+PropertyValue: found 19 properties
+Specification base set to http://www.schema.org
+Using Version 7.03
+Found http://www.schema.org/PropertyValue
+PropertyValue: found 19 properties
+Specification base set to http://www.schema.org
+Using Version 7.03
+Found http://www.schema.org/PropertyValue
+PropertyValue: found 19 properties
+Specification base set to http://www.schema.org
+Using Version 7.03
+Found http://www.schema.org/PropertyValue
+PropertyValue: found 19 properties
+Specification base set to http://www.schema.org
+Using Version 7.03
+Found http://www.schema.org/PropertyValue
+PropertyValue: found 19 properties
+Specification base set to http://www.schema.org
+Using Version 7.03
+Found http://www.schema.org/PropertyValue
+PropertyValue: found 19 properties
+Specification base set to http://www.schema.org
+Using Version 7.03
+Found http://www.schema.org/PropertyValue
+PropertyValue: found 19 properties
+Specification base set to http://www.schema.org
+Using Version 7.03
+Found http://www.schema.org/Organization
+Organization: found 63 properties
+Specification base set to http://www.schema.org
+Using Version 7.03
+Found http://www.schema.org/Offer
+Offer: found 52 properties
+Specification base set to http://www.schema.org
+Using Version 7.03
+Found http://www.schema.org/Car
+Car: found 69 properties
+{'image': {'representativeOfPage': 'True', 'url': 'www.google.com', '@context': 'http://www.schema.org', '@type': 'ImageObject'}, 'identifier': 'www.google.com', 'url': 'www.google.com', 'logo': {'representativeOfPage': 'True', 'url': 'www.google.com', '@context': 'http://www.schema.org', '@type': 'ImageObject'}, 'sku': '0000', 'category': 'Car', 'manufacturer': {'name': 'Hyundai', 'email': 'hyundai@gmail.com', '@type': 'Organization'}, 'brand': {'name': 'Hyundai', 'description': 'Hyundai India', '@type': 'Brand'}, 'model': 'Verna', 'name': 'Verna', 'color': 'Red', 'aggregateRating': {'ratingValue': '4.0', 'reviewCount': '89', '@type': 'AggregateRating'}, 'fuelType': 'Petrol', 'vehicleConfiguration': 'Variant', 'offers': 'Ex-Showroom price : 9L - 15 L', 'bodyType': 'Sedan', 'seatingCapacity': '5', 'driveWheelCOnfiguration': 'FWD', 'vehicleEngine': {'description': '1200 cc', '@context': 'http://www.schema.org', '@type': 'EngineSpecification'}, 'vehicleTransmission': 'Manual', 'numberOfAirbags': '4', 'vehicleInteriorType': 'Leather', 'hasMerchantReturnPolicy': '{"@context": "http://www.schema.org", "@type": "Organization"}', 'additionalProperty1': '{"name": "Infotainment", "value": "HD", "@context": "http://www.schema.org", "@type": "PropertyValue"}', 'additionalProperty2': '{"name": "AC Type", "value": "Climate Control", "@context": "http://www.schema.org", "@type": "PropertyValue"}', 'additionalProperty3': '{"name": "Sunroof", "value": "Present", "@context": "http://www.schema.org", "@type": "PropertyValue"}', 'additionalProperty4': '{"name": "Dual Tone", "value": "Present", "@context": "http://www.schema.org", "@type": "PropertyValue"}', 'additionalProperty5': '{"name": "Front Brake", "value": "Disc", "@context": "http://www.schema.org", "@type": "PropertyValue"}', 'additionalProperty6': '{"name": "Rear Brake", "value": "Drum", "@context": "http://www.schema.org", "@type": "PropertyValue"}', 'additionalProperty7': '{"name": "Front Suspension", "value": "Hydraulic", "@context": "http://www.schema.org", "@type": "PropertyValue"}', 'additionalProperty8': '{"name": "Rear Suspension", "value": "Pneumatic", "@context": "http://www.schema.org", "@type": "PropertyValue"}', 'additionalProperty9': '{"name": "Wheel Size", "value": "20", "@context": "http://www.schema.org", "@type": "PropertyValue"}', 'additionalProperty10': '{"name": "Tyre Size", "value": "20", "@context": "http://www.schema.org", "@type": "PropertyValue"}'}
+======
+{"image": {"representativeOfPage": "True", "url": "www.google.com", "@context": "http://www.schema.org", "@type": "ImageObject"}, "identifier": "www.google.com", "url": "www.google.com", "logo": {"representativeOfPage": "True", "url": "www.google.com", "@type": "ImageObject"}, "sku": "0000", "category": "Car", "manufacturer": {"name": "Hyundai", "email": "hyundai@gmail.com", "@type": "Organization"}, "brand": {"name": "Hyundai", "description": "Hyundai India", "@type": "Brand"}, "model": "Verna", "name": "Verna", "color": "Red", "aggregateRating": {"ratingValue": "4.0", "reviewCount": "89", "@type": "AggregateRating"}, "fuelType": "Petrol", "vehicleConfiguration": "Variant", "vehicleTransmission": "Manual", "fuelConsumption": {"value": "5", "@type": "QuantitativeValue"}, "vehicleInteriorType": "Leather", "additionalProperty": "{\"name\": \"Infotainment\", \"value\": \"HD\", \"@context\": \"http://www.schema.org\", \"@type\": \"PropertyValue\"},{\"name\": \"AC Type\", \"value\": \"Climate Control\", \"@context\": \"http://www.schema.org\", \"@type\": \"PropertyValue\"},{\"name\": \"Sunroof\", \"value\": \"Present\", \"@context\": \"http://www.schema.org\", \"@type\": \"PropertyValue\"},{\"name\": \"Dual Tone\", \"value\": \"Present\", \"@context\": \"http://www.schema.org\", \"@type\": \"PropertyValue\"},{\"name\": \"Front Brake\", \"value\": \"Disc\", \"@context\": \"http://www.schema.org\", \"@type\": \"PropertyValue\"},{\"name\": \"Rear Brake\", \"value\": \"Drum\", \"@context\": \"http://www.schema.org\", \"@type\": \"PropertyValue\"},{\"name\": \"Front Suspension\", \"value\": \"Hydraulic\", \"@context\": \"http://www.schema.org\", \"@type\": \"PropertyValue\"},{\"name\": \"Rear Suspension\", \"value\": \"Pneumatic\", \"@context\": \"http://www.schema.org\", \"@type\": \"PropertyValue\"},{\"name\": \"Wheel Size\", \"value\": \"20\", \"@context\": \"http://www.schema.org\", \"@type\": \"PropertyValue\"},{\"name\": \"Tyre Size\", \"value\": \"20\", \"@context\": \"http://www.schema.org\", \"@type\": \"PropertyValue\"},", "@context": "http://www.schema.org", "@type": "Car"}
+
+self.category = "Car"
+        self.sku = car_dict["sku"]
+        self.model = car_dict["model"]
+        self.fuelType = car_dict["fuelType"]
+        self.vehicleConfiguration = car_dict["vehicleConfiguration"]
+        self.bodyType = car_dict["bodyType"]
+        self.seatingCapacity = car_dict["seatingCapacity"]
+        self.driveWheelCOnfiguration = car_dict["driveWheelCOnfiguration"]
+        self.bodyType = car_dict["bodyType"]
+        self.seatingCapacity = car_dict["seatingCapacity"]
+        self.vehicleTransmission = car_dict["vehicleTransmission"]
+        self.numberOfAirbags = car_dict["numberOfAirbags"]
+        self.vehicleInteriorType = car_dict["vehicleInteriorType"]
+        self.color = car_dict["color"]
