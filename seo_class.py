@@ -222,7 +222,7 @@ class Car:
 
         self.manufacturer = Organization(car_dict["manufacturer"]).retrieve()
         self.vehicleEngine = EngineSpecificaton(car_dict["vehicleEngine"]).retrieve()
-        self.offers = Offer(car_dict["offer"]).retrieve()
+        self.offer = Offer(car_dict["offers"]).retrieve()
         self.fuelConsumption = QuantitativeValue(car_dict["fuelConsumption"]).retrieve()
         self.additionalProperty0 = PropertyValue("Infotainment System",car_dict["infotain"]).retrieve()
         self.additionalProperty1 = PropertyValue("Air Conditioner type",car_dict["airCon"]).retrieve()
@@ -233,7 +233,7 @@ class Car:
         self.additionalProperty6 = PropertyValue("Front Suspension",car_dict["frontSus"]).retrieve()
         self.additionalProperty7 = PropertyValue("Rear Suspension",car_dict["rearSus"]).retrieve()
         self.additionalProperty8 = PropertyValue("Wheel Size",car_dict["wheelSize"]).retrieve()
-        self.additionalProperty8 = PropertyValue("Tyre Size",car_dict["tyreSize"]).retrieve()
+        self.additionalProperty9 = PropertyValue("Tyre Size",car_dict["tyreSize"]).retrieve()
         self.warranty = Warranty(car_dict["warranty"]).retrieve()
         self.logo = ImageObject(car_dict["logo"]).retrieve()
         self.image = ImageObject(car_dict["image"]).retrieve()
@@ -257,3 +257,15 @@ class Car:
         self.final["numberOfAirbags"] = self.numberOfAirbags
         self.final["vehicleInteriorType"] = self.vehicleInteriorType
         self.final["color"] = self.color
+        self.final["manufacturer"] = self.manufacturer
+        self.final["vehicleEngine"] = self.vehicleEngine
+        self.final["offers"] = self.offer
+        self.final["fuelConsumption"] = self.fuelConsumption
+        self.final["hasMerchantReturnPolicy"] = self.warranty
+        self.final["logo"] = self.logo
+        self.final["image"] = self.image
+        self.final["identifier"] = self.identifier
+        self.final["url"] = self.url
+        self.list = [self.additionalProperty0, self.additionalProperty1, self.additionalProperty2, self.additionalProperty3, self.additionalProperty4, self.additionalProperty5, self.additionalProperty6, self.additionalProperty7, self.additionalProperty8, self.additionalProperty9]
+        self.final["additionalProperty"] = self.list
+
