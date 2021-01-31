@@ -268,4 +268,35 @@ class Car:
         self.final["url"] = self.url
         self.list = [self.additionalProperty0, self.additionalProperty1, self.additionalProperty2, self.additionalProperty3, self.additionalProperty4, self.additionalProperty5, self.additionalProperty6, self.additionalProperty7, self.additionalProperty8, self.additionalProperty9]
         self.final["additionalProperty"] = self.list
+        return(self.final)
+
+    def retrieve(self):
+        self.final = {}
+        self.final["@type"] = self.type
+        self.final["@context"] = self.context
+        self.final["sku"] = self.sku
+        self.final["model"] = self.model
+        self.final["fuelType"] = self.fuelType
+        self.final["vehicleConfiguration"] = self.vehicleConfiguration
+        self.final["bodyType"] = self.bodyType
+        self.final["seatingCapacity"] = self.seatingCapacity
+        self.final["driveWheelCOnfiguration"] = self.driveWheelCOnfiguration
+        self.final["bodyType"] = self.bodyType
+        self.final["seatingCapacity"] = self.seatingCapacity
+        self.final["vehicleTransmission"] = self.vehicleConfiguration
+        self.final["numberOfAirbags"] = self.numberOfAirbags
+        self.final["vehicleInteriorType"] = self.vehicleInteriorType
+        self.final["color"] = self.color
+        self.final["manufacturer"] = self.manufacturer
+        self.final["vehicleEngine"] = self.vehicleEngine
+        self.final["offers"] = self.offer
+        self.final["fuelConsumption"] = self.fuelConsumption
+        self.final["hasMerchantReturnPolicy"] = self.warranty
+        self.final["logo"] = self.logo
+        self.final["image"] = self.image
+        self.final["identifier"] = self.identifier
+        self.final["url"] = self.url
+        self.list = [self.additionalProperty0, self.additionalProperty1, self.additionalProperty2, self.additionalProperty3, self.additionalProperty4, self.additionalProperty5, self.additionalProperty6, self.additionalProperty7, self.additionalProperty8, self.additionalProperty9]
+        self.final["additionalProperty"] = self.list
+        print(self.final)
 
