@@ -4,8 +4,6 @@ def add_prop(obj, key, val):
     obj.add_property(key,val)
     return obj
 
-
-
 img = Schema('ImageObject')
 img = add_prop(img,"representativeOfPage","True")
 img = add_prop(img,"url","www.google.com")
@@ -82,7 +80,9 @@ imag_dict = {"representativeOfPage": "True", "url": "www.google.com", "@context"
 
 org_dict = {"name": "Hyundai", "email": "hyundai@gmail.com", "@type": "Organization"}
 
-brand_dict = {"name": "Hyundai", "description": "Hyundai India", "@type": "Brand"}
+brand_dict = {"name": "Hyundai",
+              "description": "Hyundai India", 
+              "@type": "Brand"}
 
 rating_dict = {"ratingValue": "4.0", "reviewCount": "89", "@type": "AggregateRating"}
 
