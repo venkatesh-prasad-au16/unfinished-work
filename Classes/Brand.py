@@ -13,7 +13,7 @@ class Brand:
     def get_brand_name(self):
         return(self._brand_name)
 
-    def set_description(self, value: str):
+    def set_brand_description(self, value: str):
         self._description = value
     def get_description(self):
         return(self._description)
@@ -26,3 +26,12 @@ class Brand:
         self.d['description'] = self._description
         self.djson = json.dumps(self.d)
         print(self.djson)
+    
+    def get_schema(self):
+        self.d = {}
+        self.d['@type'] = self._type
+        self.d['@context'] = self._context
+        self.d['name'] = self._brand_name
+        self.d['description'] = self._description
+        self.djson = json.dumps(self.d)
+        return(self.djson)
