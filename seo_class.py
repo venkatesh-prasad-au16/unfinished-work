@@ -1,26 +1,37 @@
 class Brand:
     
-    def __init__(self, brand: dict):
+    def __init__(self, ab: dict={}):
         self.type = "Brand"
         self.context = "http://www.schema.org"
-        self.name = brand["name"]
-        self.description = brand["description"]
-        
-    def retrieve(self):
-        self.brand_dict = {}
-        self.brand_dict["@type"] = self.type
-        self.brand_dict["@context"] = self.context
-        self.brand_dict["name"] = self.name
-        self.brand_dict["description"] = self.description
-        return(self.brand_dict)
+        self._brand_name = ab.get("bb_name")
+        # self._description = ab["description"]
 
-    def print(self):
-        self.brand_dict = {}
-        self.brand_dict["@type"] = self.type
-        self.brand_dict["@context"] = self.context
-        self.brand_dict["name"] = self.name
-        self.brand_dict["description"] = self.description
-        print(self.brand_dict) 
+    @property
+    def brand_name(self):
+        print("Getting value...")
+        return self._brand_name
+
+    @brand_name.setter
+    def brand_name(self, value: str):
+        self._brand_name = value
+
+
+
+    # def retrieve(self):
+    #     self.brand_dict = {}
+    #     self.brand_dict["@type"] = self.type
+    #     self.brand_dict["@context"] = self.context
+    #     self.brand_dict["name"] = self.name
+    #     self.brand_dict["description"] = self.description
+    #     return(self.brand_dict)
+
+    # def print(self):
+    #     self.brand_dict = {}
+    #     self.brand_dict["@type"] = self.type
+    #     self.brand_dict["@context"] = self.context
+    #     self.brand_dict["name"] = self.name
+    #     self.brand_dict["description"] = self.description
+    #     print(self.brand_dict) 
 
 class Organization:
     
@@ -51,7 +62,7 @@ class ImageObject:
     def __init__(self, img: str):
         self.type = "ImageObject"
         self.context = "http://www.schema.org"
-        self.url = img["url"]
+        self.url = img
 
     def retrieve(self):
         self.image_dict = {}
@@ -79,7 +90,7 @@ class EngineSpecificaton:
     def retrieve(self):
         self.engine_dict = {}
         self.engine_dict["@type"] = self.type
-        self.engineType["@context"] = self.context
+        self.engine_dict["@context"] = self.context
         self.engine_dict["engineType"] = self.engineType
         self.engine_dict["fuelType"] = self.fuelType
         self.engine_dict["engineDisplacement"] = self.engineDisplacement
@@ -212,9 +223,7 @@ class Car:
         self.vehicleConfiguration = car_dict["vehicleConfiguration"]
         self.bodyType = car_dict["bodyType"]
         self.seatingCapacity = car_dict["seatingCapacity"]
-        self.driveWheelCOnfiguration = car_dict["driveWheelCOnfiguration"]
-        self.bodyType = car_dict["bodyType"]
-        self.seatingCapacity = car_dict["seatingCapacity"]
+        self.driveWheelConfiguration = car_dict["driveWheelConfiguration"]  
         self.vehicleTransmission = car_dict["vehicleTransmission"]
         self.numberOfAirbags = car_dict["numberOfAirbags"]
         self.vehicleInteriorType = car_dict["vehicleInteriorType"]
@@ -270,7 +279,7 @@ class Car:
         self.final["additionalProperty"] = self.list
         return(self.final)
 
-    def retrieve(self):
+    def print(self):
         self.final = {}
         self.final["@type"] = self.type
         self.final["@context"] = self.context
@@ -280,7 +289,7 @@ class Car:
         self.final["vehicleConfiguration"] = self.vehicleConfiguration
         self.final["bodyType"] = self.bodyType
         self.final["seatingCapacity"] = self.seatingCapacity
-        self.final["driveWheelCOnfiguration"] = self.driveWheelCOnfiguration
+        self.final["driveWheelConfiguration"] = self.driveWheelConfiguration
         self.final["bodyType"] = self.bodyType
         self.final["seatingCapacity"] = self.seatingCapacity
         self.final["vehicleTransmission"] = self.vehicleConfiguration
@@ -300,3 +309,60 @@ class Car:
         self.final["additionalProperty"] = self.list
         print(self.final)
 
+carDict = {
+    "sku" : "0000",
+    "model" : "Verna",
+    "fuelType" : "Petrol",
+    "vehicleConfiguration" : "FWD",
+    "bodyType" : "Sedan",
+    "seatingCapacity" : "6",
+    "driveWheelConfiguration" : "FWD",
+    "vehicleTransmission" : "Fluid",
+    "numberOfAirbags" : "5",
+    "vehicleInteriorType" : "Leather",
+    "color" : "Black",
+    "fuelConsumption" : "22 kmpl",
+    "infotain" : "Full HD",
+    "airCon" : "Climate Control",
+    "sunRoof" : "Present",
+    "dualtone" : "Present",
+    "frontBrake" : "Ceramic",
+    "rearBrake" : "Drum",
+    "frontSus" : "Hydraulic",
+    "rearSus" : "Pneumatic",
+    "wheelSize" : "22",
+    "tyreSize" : "45",
+    "warranty" : "3 Years",
+    "logo" : "www.google.com",
+    "image" : "www.google.com",
+    "url" : "www.hyundai.com",
+
+
+    "manufacturer" : {
+        "name" : "Hyundai",
+        "email" : "hyundai@google.com"
+    },
+
+    "vehicleEngine" : {
+        "engineType" : "Crossplane",
+        "fuelType" : "Petrol",
+        "engineDisplacement" : "1.1L"
+    },
+
+    "offers" : {
+        "price" : "2.2L"
+    }
+
+}
+
+# myCar = Car(carDict)
+# myCar.print()
+
+# myBrand = Brand({"name":"Hyundai","description": "xyz"})
+
+myBrand= Brand({"bb_name":"My super brand"})
+
+myBrand
+
+
+print(myBrand.brand_name)
