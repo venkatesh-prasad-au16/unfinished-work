@@ -1,10 +1,10 @@
 class Brand:
     
-    def __init__(self, ab: dict={}):
+    def __init__(self, ab: dict = {}):
         self.type = "Brand"
         self.context = "http://www.schema.org"
         self._brand_name = ab.get("bb_name")
-        # self._description = ab["description"]
+        self._description = ab.get("description")
 
     @property
     def brand_name(self):
