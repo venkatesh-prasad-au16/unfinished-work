@@ -9,6 +9,8 @@ from Organization import Organization
 from EngineSpecification import EngineSpecification
 from Offer import Offer
 from QuantitativeValue import QuantitativeValue
+from MerchantReturnPolicy import MerchantReturnPolicy
+from ImageObject import ImageObject
 
 class Car:
 
@@ -21,6 +23,7 @@ class Car:
         self._model = cardict.get('model')
         self._name = cardict.get('name')
         self._fuelType = cardict.get('fuelType')
+        self._image = cardict.get('imageURL')
         self._vehicleConfiguration = cardict.get('vehicleConfiguration')
         self._bodyType = cardict.get('bodyType')
         self._seatingCapacity = cardict.get('seatingCapacity')
@@ -45,7 +48,35 @@ class Car:
         self._fuelConsumption = QuantitativeValue()
         self._fuelConsumption.set_value(cardict.get('fuelConsumption'))
 
+        self._warranty = MerchantReturnPolicy()
+        self._warranty.set_description(cardict.get('warranty'))
 
+        self._logo = ImageObject()
+        self._logo.set_img_url(cardict.get("logoUrl"))
+        self._logo.set_img_repVal(cardict.get("logoRepVal"))
+
+    
+    def set_image_url(self, x: str):
+        self._image = x
+
+    def get_image_url(self):
+        return(self._image)
+
+    def set_logo_url(self, x: str):
+        self._logo.set_img_url(x)
+    
+    def set_logo_repVal(self, x: str):
+        return(self._logo.set_img_repVal(x))
+    
+    def get_logo_details(self):
+        return(self._logo.get_dict())
+
+
+    def set_warranty(self, x: str):
+        self._warranty.set_description(x)
+
+    def get_warranty(self):
+        return(self._warranty.get_description())
 
     def set_fuelConsumption(self, x: str):
         self._fuelConsumption.set_value(x)
@@ -192,6 +223,7 @@ class Car:
         self.d['model'] = self._model
         self.d['name'] = self._name
         self.d['color'] = self._color
+        self.d['image'] = self._image
         self.d['fuelType'] = self._fuelType
         self.d['vehicleConfiguration'] = self._vehicleConfiguration
         self.d['bodyType'] = self._bodyType
@@ -204,7 +236,7 @@ class Car:
         self.d['vehicleEngine'] = self._vehicleEngine.get_dict()
         self.d['offers'] = self._offer.get_dict()
         self.d['fuelConsumption'] = self._fuelConsumption.get_dict()
-        self.djson = json.dumps(self.d)
-        print(self.djson)
+        self.d['hasMerchantReturnPolicy'] = self._warranty.get_dict()
+        print(json.dumps(self.d))
 
     #Method to retrieve the JSON-LD of the object

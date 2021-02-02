@@ -29,6 +29,11 @@ x.set_engine_displacement("2.2L")
 x.set_offer_price("22")
 x.set_fuelConsumption("hi")
 
+x.set_warranty("Hello")
+x.set_logo_url("Hi")
+x.set_logo_repVal("True")
+x.set_image_url("www.google.com")
+
 x.get_sku()
 x.get_model()
 x.get_fuelType()
@@ -44,5 +49,8 @@ x.get_vehicleInteriorType()
 x.get_manufacturer_details()
 x.get_offer_price()
 x.get_fuelConsumption()
+x.get_warranty()
+x.get_logo_details()
+
 
 x.dump_schema()

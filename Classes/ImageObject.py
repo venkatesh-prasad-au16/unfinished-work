@@ -41,13 +41,13 @@ class ImageObject:
         print(json.dumps(self.d))
 
     # Method to retrieve the image object JSON-LD elsewhere   
-    def get_schema(self):
+    def get_dict(self):
         self.d = {}
         self.d['@type'] = self._type
         self.d['@context'] = self._context
         self.d['url'] = self._imgURL
         self.d['representativeOfPage'] = self._imgRepVal
-        return(json.dumps(self.d))
+        return(self.d)
 
 
 

@@ -29,11 +29,10 @@ class MerchantReturnPolicy:
         print(self.djson)
 
     #Method to retrieve the JSON-LD of the object
-    def get_schema(self):
+    def get_dict(self):
         self.d = {}
         self.d['@type'] = self._type
         self.d['@context'] = self._context
         self.d['description'] = self._description
-        self.djson = json.dumps(self.d)
-        return(self.djson)
+        return(self.d)
     
