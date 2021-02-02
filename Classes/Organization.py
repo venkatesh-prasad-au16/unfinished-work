@@ -1,22 +1,35 @@
+"""
+Class Organization : Accepts dictionary object while instantiation.
+Class Organization Methods : set_org_name, get_org_name, set_org_email,
+                get_org_email, dump_schema, get_schema
+"""
 import json
 class Organization:
     
+    # Pass dictionary with keys 'name' and 'email' 
+    # if user wants to set values while object instantiation
     def __init__(self, iorg: dict = {}):
         self._type = "Organization"
         self._context = "http://www.schema.org"
         self._org_name = iorg.get('name')
         self._org_email = iorg.get('email')
     
-    def set_brand_name(self, value: str):
+    # Method to manually set the value of org_name by passing a string
+    def set_org_name(self, value: str):
         self._org_name = value
-    def get_brand_name(self):
+    
+    # Method to retrieve the value of org_name
+    def get_org_name(self):
         return(self._org_name)
 
+    # Method to manually set the value of org_email by passing a string
     def set_org_email(self, value: str):
         self._org_email= value
-    def get_description(self):
+    # Method to retrieve the value of org_email
+    def get_org_email(self):
         return(self._org_email)
 
+    # Method to print the image object JSON-LD to console
     def dump_schema(self):
         self.d = {}
         self.d['@type'] = self._type
@@ -26,6 +39,7 @@ class Organization:
         self.djson = json.dumps(self.d)
         print(self.djson)
     
+    # Method to retrieve the image object JSON-LD elsewhere 
     def get_schema(self):
         self.d = {}
         self.d['@type'] = self._type
