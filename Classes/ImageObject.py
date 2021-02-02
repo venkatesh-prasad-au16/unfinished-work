@@ -11,33 +11,33 @@ class ImageObject:
     def __init__(self, img: dict = {}):
         self._type = "ImageObject"
         self._context = "http://www.schema.org"
-        self._img_url = img.get('url')
-        self._img_repVal = img.get('representativeOfPage')
+        self._imgURL = img.get('url')
+        self._imgRepVal = img.get('representativeOfPage')
 
     # Method to manually set the value of img_url by passing a string
     def set_img_url(self, value: str):
-        self._img_url= value
+        self._imgURL= value
     
     # Method to retrieve the value of img_url
     def get_img_url(self):
-        return(self._img_url)
+        return(self._imgURL)
 
     # Method to manually set the value of img_repVal(representativeOfPage) by passing
     # a "True" or "False" string
     def set_img_repVal(self, value: str):
-        self._img_repVal = value
+        self._imgRepVal = value
     
     # Method to retrieve the value of img_repVal(representativeOfPage) 
     def get_img_repVal(self):
-        return(self._img_repVal)
+        return(self._imgRepVal)
 
     # Method to print the image object JSON-LD to console
     def dump_schema(self):
         self.d = {}
         self.d['@type'] = self._type
         self.d['@context'] = self._context
-        self.d['url'] = self._img_url
-        self.d['representativeOfPage'] = self._img_repVal
+        self.d['url'] = self._imgURL
+        self.d['representativeOfPage'] = self._imgRepVal
         print(json.dumps(self.d))
 
     # Method to retrieve the image object JSON-LD elsewhere   
@@ -45,8 +45,8 @@ class ImageObject:
         self.d = {}
         self.d['@type'] = self._type
         self.d['@context'] = self._context
-        self.d['url'] = self._img_url
-        self.d['representativeOfPage'] = self._img_repVal
+        self.d['url'] = self._imgURL
+        self.d['representativeOfPage'] = self._imgRepVal
         return(json.dumps(self.d))
 
 
