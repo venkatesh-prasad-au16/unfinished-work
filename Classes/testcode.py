@@ -3,15 +3,15 @@ import collections
 from os import path
 sys.path.append(".")
 import json
-from PropertyValue import PropertyValue
+from MerchantReturnPolicy import MerchantReturnPolicy
 
 
-x = PropertyValue("Sunroof","Yes")
+x = MerchantReturnPolicy("Sunroof")
 x.dump_schema()
-print(x.get_name())
-print(x.get_value())
+print(x.get_description())
+# print(x.get_value())
 
-x.set_value("35L")
-x.set_name("Nobody")
+x.set_description("35L")
+# x.set_name("Nobody")
 
 print(x.get_schema())

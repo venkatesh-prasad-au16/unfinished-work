@@ -1,30 +1,30 @@
 """
-Class Offer : Accepts string object while instantiation.
-Class Offer Methods : set_price, get_price, dump_schema, get_schema
+Class MerchantReturnPolicy : Accepts string object while instantiation.
+Class MerchantReturnPolicy Methods : set_description, get_description, dump_schema, get_schema
 """
 import json
-class Offer:
+class MerchantReturnPolicy:
 
     # Pass string price if user wants to set value while object instantiation
-    def __init__(self, price: str = ""):
-        self._type = 'Offer'
+    def __init__(self, description: str = ""):
+        self._type = 'MerchantReturnPolicy'
         self._context = 'http://www.schema.org'
-        self._price = price 
+        self._description = description 
 
     # Method to manually set the value of price
-    def set_price(self, price: str):
-        self._price = price
+    def set_description(self, description: str):
+        self._description = description
     
     # Method to retrieve the value of price
-    def get_price(self):
-        return(self._price)
+    def get_description(self):
+        return(self._description)
 
     # Method to print JSON-LD to console
     def dump_schema(self):
         self.d = {}
         self.d['@type'] = self._type
         self.d['@context'] = self._context
-        self.d['price'] = self._price
+        self.d['description'] = self._description
         self.djson = json.dumps(self.d)
         print(self.djson)
 
@@ -33,7 +33,7 @@ class Offer:
         self.d = {}
         self.d['@type'] = self._type
         self.d['@context'] = self._context
-        self.d['price'] = self._price
+        self.d['description'] = self._description
         self.djson = json.dumps(self.d)
         return(self.djson)
     
