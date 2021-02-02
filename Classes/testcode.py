@@ -3,13 +3,15 @@ import collections
 from os import path
 sys.path.append(".")
 import json
-from Offer import Offer
+from PropertyValue import PropertyValue
 
 
-x = Offer("22L")
+x = PropertyValue("Sunroof","Yes")
 x.dump_schema()
-print(x.get_price())
+print(x.get_name())
+print(x.get_value())
 
-x.set_price("35L")
+x.set_value("35L")
+x.set_name("Nobody")
 
 print(x.get_schema())
