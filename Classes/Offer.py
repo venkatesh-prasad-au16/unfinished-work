@@ -5,19 +5,21 @@ Class Brand Methods : set_price, get_price, dump_schema, get_schema
 import json
 class Offer:
 
-    # Pass string price 
-    # if user wants to set values while object instantiation
+    # Pass string price if user wants to set value while object instantiation
     def __init__(self, price: str = ""):
         self._type = 'Offer'
         self._context = 'http://www.schema.org'
         self._price = price 
 
+    # Method to manually set the value of price
     def set_price(self, price: str):
         self._price = price
     
+    # Method to retrieve the value of price
     def get_price(self):
         return(self._price)
 
+    # Method to print JSON-LD to console
     def dump_schema(self):
         self.d = {}
         self.d['@type'] = self._type
@@ -26,6 +28,7 @@ class Offer:
         self.djson = json.dumps(self.d)
         print(self.djson)
 
+    #Method to retrieve the JSON-LD of the object
     def get_schema(self):
         self.d = {}
         self.d['@type'] = self._type
