@@ -1,17 +1,33 @@
 import sys
-import collections
-from os import path
 sys.path.append(".")
 import json
-from MerchantReturnPolicy import MerchantReturnPolicy
+from Car import Car
 
 
-x = MerchantReturnPolicy("Sunroof")
-x.dump_schema()
-print(x.get_description())
-# print(x.get_value())
+x = Car()
 
-x.set_description("35L")
+
+x.set_sku("www.googl.com")
+x.set_model("Hello")
+x.set_fuelType("Patrol")
+x.set_vehicleConfiguration("LOL")
+x.set_bodyType("lol")
+x.set_seatingCapacity("33")
+x.set_name('LOL')
+x.set_driveWheelConfiguration("Fwd")
+x.set_vehicleTransmission("lol")
+x.set_numberOfAirbags("6")
+
+x.get_sku()
+x.get_model()
+x.get_fuelType()
+x.get_vehicleConfiguration()
+x.get_bodyType()
+x.get_seatingCapacity()
+x.get_name()
+x.get_driveWheelConfiguration()
+x.get_vehicleTransmission()
+x.get_numberOfAirbags()
 # x.set_name("Nobody")
 
-print(x.get_schema())
+x.dump_schema()

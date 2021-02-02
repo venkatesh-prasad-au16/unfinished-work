@@ -47,4 +47,12 @@ class Organization:
         self.d['name'] = self._org_name
         self.d['email'] = self._org_email
         self.djson = json.dumps(self.d)
-        return(self.djson)
+        return(self.d)
+
+    def get_dict(self):
+        self.d = {}
+        self.d['@type'] = self._type
+        self.d['@context'] = self._context
+        self.d['name'] = self._org_name
+        self.d['email'] = self._org_email
+        return(self.d)

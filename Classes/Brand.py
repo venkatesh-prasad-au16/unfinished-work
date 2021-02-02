@@ -49,3 +49,11 @@ class Brand:
         self.d['description'] = self._brandDescription
         self.djson = json.dumps(self.d)
         return(self.djson)
+
+    def get_dict(self):
+        self.d = {}
+        self.d['@type'] = self._type
+        self.d['@context'] = self._context
+        self.d['name'] = self._brandName
+        self.d['description'] = self._brandDescription
+        return(self.d)

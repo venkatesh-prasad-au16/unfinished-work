@@ -61,3 +61,12 @@ class EngineSpecification:
         self.d['engineDisplacement'] = self._engineDisplacement
         self.djson = json.dumps(self.d)
         return(self.djson)
+
+    def get_dict(self):
+        self.d = {}
+        self.d['@type'] = self._type
+        self.d['@context'] = self._context
+        self.d['engineType'] = self._engineType
+        self.d['fuelType'] = self._engineFuelType
+        self.d['engineDisplacement'] = self._engineDisplacement
+        return(self.d)

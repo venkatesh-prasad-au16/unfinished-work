@@ -11,11 +11,11 @@ class MerchantReturnPolicy:
         self._context = 'http://www.schema.org'
         self._description = description 
 
-    # Method to manually set the value of price
+    # Method to manually set the value of description
     def set_description(self, description: str):
         self._description = description
     
-    # Method to retrieve the value of price
+    # Method to retrieve the value of description
     def get_description(self):
         return(self._description)
 
