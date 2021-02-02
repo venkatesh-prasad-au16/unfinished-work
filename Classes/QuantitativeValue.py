@@ -13,7 +13,7 @@ class QuantitativeValue:
 
     # Method to manually set the value
     def set_value(self, value: str):
-        self._price = value
+        self._value = value
     
     # Method to retrieve the value
     def get_value(self):
@@ -29,11 +29,10 @@ class QuantitativeValue:
         print(self.djson)
 
     #Method to retrieve the JSON-LD of the object
-    def get_schema(self):
+    def get_dict(self):
         self.d = {}
         self.d['@type'] = self._type
         self.d['@context'] = self._context
         self.d['value'] = self._value
-        self.djson = json.dumps(self.d)
-        return(self.djson)
+        return(self.d)
     

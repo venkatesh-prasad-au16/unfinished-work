@@ -61,7 +61,8 @@ class EngineSpecification:
         self.d['engineDisplacement'] = self._engineDisplacement
         self.djson = json.dumps(self.d)
         return(self.djson)
-
+    
+    # Method to fetch object dictionary
     def get_dict(self):
         self.d = {}
         self.d['@type'] = self._type

@@ -6,6 +6,9 @@ import json
 import sys
 sys.path.append(".")
 from Organization import Organization
+from EngineSpecification import EngineSpecification
+from Offer import Offer
+from QuantitativeValue import QuantitativeValue
 
 class Car:
 
@@ -31,7 +34,36 @@ class Car:
         self._manufacturer.set_org_name(cardict.get('manufacturer'))
         self._manufacturer.set_org_email(cardict.get('email'))
 
+        self._vehicleEngine = EngineSpecification()
+        self._vehicleEngine.set_engine_type(cardict.get('engineType'))
+        self._vehicleEngine.set_engine_fuel_type(cardict.get('fuelType'))
+        self._vehicleEngine.set_engine_displacement(cardict.get('engineDisplacement'))
+        
+        self._offer = Offer()
+        self._offer.set_price(cardict.get('offers'))
 
+        self._fuelConsumption = QuantitativeValue()
+        self._fuelConsumption.set_value(cardict.get('fuelConsumption'))
+
+
+
+    def set_fuelConsumption(self, x: str):
+        self._fuelConsumption.set_value(x)
+    
+    def get_fuelConsumption(self):
+        return(self._fuelConsumption)
+
+    def set_engine_type(self, x: str):
+        self._vehicleEngine.set_engine_type(x)
+    
+    def set_engine_fuel_type(self, x:str):
+        self._vehicleEngine.set_engine_fuel_type(x)
+    
+    def set_engine_displacement(self, x: str):
+        self._vehicleEngine.set_engine_displacement(x)
+
+    def get_engine_details(self):
+        return(self._vehicleEngine.get_dict())
 
     # Method to manually set the string sku
     def set_sku(self, x: str):
@@ -57,7 +89,7 @@ class Car:
     def get_model(self):
         return(self._model)
 
-        # Method to manually set the string name
+    # Method to manually set the string name
     def set_name(self, x: str):
         self._name = x 
     
@@ -135,9 +167,20 @@ class Car:
         self._manufacturer.set_org_email(x)
 
     def get_manufacturer_details(self):
-        self._manufacturer.get_schema()
+        self._manufacturer.get_dict()
 
-    def set_interiorType(self, x: )
+    def set_vehicleIinteriorType(self, x: str = ""):
+        self._vehicleInteriorType = x
+
+    def get_vehicleInteriorType(self):
+        return(self._vehicleInteriorType)
+    
+    def set_offer_price(self, x:str):
+        self._offer.set_price(x)
+    
+    def get_offer_price(self):
+        return(self._offer.get_price())
+
 
     # Method to print JSON-LD to console
     def dump_schema(self):
@@ -156,7 +199,11 @@ class Car:
         self.d['driveWheelConfiguration'] = self._driveWheelConfiguration
         self.d['vehicleTransmission'] = self._vehicleTransmission
         self.d['numberOfAirbags'] = self._numberOfAirbags
+        self.d['vehicleInteriorType'] = self._vehicleInteriorType
         self.d['manufacturer'] = self._manufacturer.get_dict()
+        self.d['vehicleEngine'] = self._vehicleEngine.get_dict()
+        self.d['offers'] = self._offer.get_dict()
+        self.d['fuelConsumption'] = self._fuelConsumption.get_dict()
         self.djson = json.dumps(self.d)
         print(self.djson)
 
