@@ -338,7 +338,7 @@ class Car:
         print(json.dumps(self._d))
 
     #Method to retrieve the dict of the object
-    def dump_schema(self):
+    def get_dict(self):
         self._d = {}
         self._d['@type'] = self._type
         self._d['@context'] = self._context
