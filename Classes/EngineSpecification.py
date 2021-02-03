@@ -2,7 +2,7 @@
 Class EngineSpecification : Accepts dictionary object while instantiation.
 Class EngineSpecification Methods : set_engine_type, get_engine_type, set_engine_fuel_type,
                 get_engine_fuel_type, set_engine_displacement, get_engine_displacement,
-                dump_schema, get_schema
+                dump_schema, get_dict
 """
 import json
 class EngineSpecification:

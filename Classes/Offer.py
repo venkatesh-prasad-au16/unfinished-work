@@ -10,6 +10,7 @@ class Offer:
         self._type = 'Offer'
         self._context = 'http://www.schema.org'
         self._price = price 
+        self._currency = 'INR'
 
     # Method to manually set the value of price
     def set_price(self, price: str):
@@ -24,6 +25,7 @@ class Offer:
         self.d = {}
         self.d['@type'] = self._type
         self.d['@context'] = self._context
+        self.d['priceCurrency'] = self._currency
         self.d['price'] = self._price
         self.djson = json.dumps(self.d)
         print(self.djson)
@@ -33,6 +35,7 @@ class Offer:
         self.d = {}
         self.d['@type'] = self._type
         self.d['@context'] = self._context
+        self.d['priceCurrency'] = self._currency
         self.d['price'] = self._price
         return(self.d)
     

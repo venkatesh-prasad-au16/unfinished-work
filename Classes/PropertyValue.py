@@ -14,7 +14,7 @@ class PropertyValue:
 
     # Method to manually set the name
     def set_name(self, name: str):
-        self._price = name
+        self._name = name
     
     # Method to retrieve the name
     def get_name(self):
@@ -22,7 +22,7 @@ class PropertyValue:
 
     # Method to manually set the value
     def set_value(self, value: str):
-        self._price = value
+        self._value = value
     
     # Method to retrieve the value
     def get_value(self):
@@ -39,12 +39,11 @@ class PropertyValue:
         print(self.djson)
 
     #Method to retrieve the JSON-LD of the object
-    def get_schema(self):
+    def get_dict(self):
         self.d = {}
         self.d['@type'] = self._type
         self.d['@context'] = self._context
         self.d['name'] = self._name
         self.d['value'] = self._value
-        self.djson = json.dumps(self.d)
-        return(self.djson)
+        return(self.d)
     

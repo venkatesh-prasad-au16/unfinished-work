@@ -1,7 +1,7 @@
 """
 Class ImageObject : Accepts dictionary object while instantiation.
 Class ImageObject Methods : set_img_url, get_img_url, set_img_repVal,
-                get_img_repVal, dump_schema, get_schema
+                get_img_repVal, dump_schema, get_dict
 """
 import json
 class ImageObject:

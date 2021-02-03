@@ -1,7 +1,7 @@
 """
 Class Brand : Accepts dictionary object while instantiation.
 Class Brand Methods : set_brand_name, get_brand_name, set_brand_description,
-                get_brand_description, dump_schema, get_schema
+                get_brand_description, dump_schema, get_dict
 """
 import json
 class Brand:
@@ -39,17 +39,8 @@ class Brand:
         self.d['description'] = self._brandDescription
         self.djson = json.dumps(self.d)
         print(self.djson)
-    
-    # Method to retrieve the brand object JSON-LD elsewhere
-    def get_schema(self):
-        self.d = {}
-        self.d['@type'] = self._type
-        self.d['@context'] = self._context
-        self.d['name'] = self._brandName
-        self.d['description'] = self._brandDescription
-        self.djson = json.dumps(self.d)
-        return(self.djson)
 
+    # Method to retrieve the dictionary of the Object
     def get_dict(self):
         self.d = {}
         self.d['@type'] = self._type

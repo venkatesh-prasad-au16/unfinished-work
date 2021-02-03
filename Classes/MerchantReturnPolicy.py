@@ -1,6 +1,6 @@
 """
 Class MerchantReturnPolicy : Accepts string object while instantiation.
-Class MerchantReturnPolicy Methods : set_description, get_description, dump_schema, get_schema
+Class MerchantReturnPolicy Methods : set_description, get_description, dump_schema, get_dict
 """
 import json
 class MerchantReturnPolicy:
@@ -28,7 +28,7 @@ class MerchantReturnPolicy:
         self.djson = json.dumps(self.d)
         print(self.djson)
 
-    #Method to retrieve the JSON-LD of the object
+    #Method to retrieve the dictionary of Object
     def get_dict(self):
         self.d = {}
         self.d['@type'] = self._type

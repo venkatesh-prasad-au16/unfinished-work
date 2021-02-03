@@ -29,7 +29,7 @@ class Organization:
     def get_org_email(self):
         return(self._org_email)
 
-    # Method to print the image object JSON-LD to console
+    # Method to print the object JSON-LD to console
     def dump_schema(self):
         self.d = {}
         self.d['@type'] = self._type
@@ -39,16 +39,7 @@ class Organization:
         self.djson = json.dumps(self.d)
         print(self.djson)
     
-    # Method to retrieve the image object JSON-LD elsewhere 
-    def get_schema(self):
-        self.d = {}
-        self.d['@type'] = self._type
-        self.d['@context'] = self._context
-        self.d['name'] = self._org_name
-        self.d['email'] = self._org_email
-        self.djson = json.dumps(self.d)
-        return(self.d)
-
+    # Method to retrieve the object dictionary elsewhere 
     def get_dict(self):
         self.d = {}
         self.d['@type'] = self._type
