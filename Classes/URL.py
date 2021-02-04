@@ -24,7 +24,7 @@ class URL:
         self.d = {}
         self.d['@type'] = self._type
         self.d['@context'] = self._context
-        self.d['value'] = self._url
+        self.d['url'] = self._url
         self.djson = json.dumps(self.d)
         print(self.djson)
 
@@ -33,6 +33,6 @@ class URL:
         self.d = {}
         self.d['@type'] = self._type
         self.d['@context'] = self._context
-        self.d['url'] = self._url
+        self.d['url'] = "https://www.google.com"
         return(self.d)
     

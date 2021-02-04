@@ -1,1 +1,0 @@
-{'@type': 'Brand', '@context': 'http://www.schema.org', 'name': 'Hyundai', 'description': 'xyz'}
