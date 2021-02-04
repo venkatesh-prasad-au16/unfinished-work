@@ -56,6 +56,9 @@ class Car:
         
         self._offer = Offer()
         self._offer.set_price(cardict.get('offers'))
+        self._offer.set_currency(cardict.get('currency'))
+        self._offer.set_price_validity(cardict.get('priceValidity'))
+        self._offer.set_url(cardict.get('url'))
 
         self._fuelConsumption = QuantitativeValue()
         self._fuelConsumption.set_value(cardict.get('fuelConsumption'))
@@ -104,8 +107,20 @@ class Car:
         self._wheelsize.set_value(cardict.get('wheelsize'))
 
         self._tyresize = PropertyValue()
-        self._tyresize.set_name('tyre Size')
+        self._tyresize.set_name('Tyre Size')
         self._tyresize.set_value(cardict.get('tyresize'))
+
+    def set_offer_currency(self,x: str):
+        self._offer.set_currency(x)
+
+    def set_offer_availability(self, x: str):
+        self._offer.set_item_availability(x)
+    
+    def set_offer_validity(self,x: str):
+        self._offer.set_price_validity(x)
+
+    def set_offer_url(self,x: str):
+        self._offer.set_url(x)
 
     def set_infotain_value(self, x: str):
         self._infotain.set_value(x)

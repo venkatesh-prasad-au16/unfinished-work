@@ -28,6 +28,10 @@ x.set_engine_type("Crossplane")
 x.set_engine_fuel_type("Diesel")
 x.set_engine_displacement("2.2L")
 x.set_offer_price("22")
+x.set_offer_validity("2021-02-04")
+x.set_offer_url("www.hyundai.com")
+x.set_offer_availability("http://schema.org/InStock")
+x.set_offer_currency("INR")
 x.set_fuelConsumption("hi")
 x.set_identifier("www.google.com")
 
@@ -37,6 +41,7 @@ x.set_logo_repVal("True")
 x.set_image_url("www.google.com")
 x.set_brand("Hello")
 x.set_car_url("www.google.com")
+
 
 x.set_infotain_value("HD")
 x.set_aircon_value("Climate Control")
