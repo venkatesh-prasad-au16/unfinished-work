@@ -1,0 +1,300 @@
+    1  ls
+    2  clear
+    3  exit
+    4  sudo apt update
+    5  nvidia-smi
+    6  sudo apt update
+    7  sudo apt upgrade -y
+    8  nvidia-smi
+    9  clear
+   10  curl -fsSL https://starship.rs/install.sh | bash
+   11  sudo apt install curl
+   12  curl -fsSL https://starship.rs/install.sh | bash
+   13  sudo apt install gedit'
+   14  sudo apt install gedit
+   15  sudo gedit .bashrc 
+   16  exit
+   17  ls
+   18  clear
+   19  nvidia-smi
+   20  clear
+   21  sudo apt install blueman
+   22  exit
+   23  ls
+   24  sudo apt install ./*.deb
+   25  sudo apt purge firefox
+   26  sudo apt autoremove
+   27  sudo apt autoclean
+   28  clear
+   29  nvidia-smi
+   30  exit
+   31  sudo apt update
+   32  sudo apt upgrade
+   33  ls
+   34  clear
+   35  ls
+   36  clear
+   37  sudo apt install nodejs
+   38  sudo apt update
+   39  sudo apt update --fix-missing
+   40  sudo apt install nodejs
+   41  sudo apt update
+   42  clear
+   43  lsd
+   44  clear
+   45  sudo apt update
+   46  clear
+   47  nvidia-smi 
+   48  clear
+   49  sudo apt install npm
+   50  npx next -h
+   51  npm install react
+   52  npx next -h
+   53  npm install react-dom
+   54  npx next -h
+   55  sudo apt-get remove docker docker-engine docker.io containerd runc
+   56  sudo apt-get update
+   57  clear
+   58  sudo apt-get update
+   59  sudo apt update
+   60  ls
+   61  sudo apt update
+   62  clear
+   63  sudo apt-get install     apt-transport-https     ca-certificates     curl     gnupg     lsb-release
+   64  echo   "deb [arch=amd64 signed-by=/usr/share/keyrings/docker-archive-keyring.gpg] https://download.docker.com/linux/ubuntu \
+   65    $(lsb_release -cs) stable" | sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
+   66  sudo apt-get update
+   67  sudo apt-get install docker-ce docker-ce-cli containerd.io
+   68  clear
+   69  ls
+   70  docker run --name mynginx1 -p 80:80 -d nginx
+   71  sudo docker run --name mynginx1 -p 80:80 -d nginx
+   72  docker ps
+   73  sudo docker ps
+   74  ls
+   75  clear
+   76  sudo apt install git
+   77  git clone https://github.com/bbachi/nextjs-nginx-docker.git
+   78  npm install
+   79  npm run dev
+   80  ls
+   81  cd nextjs-nginx-docker/
+   82  ls
+   83  npm install
+   84  npm run dev
+   85  ls
+   86  docker build -t nextjs-ui
+   87  nvidia-smi
+   88  clear
+   89  cd ..
+   90  ;s
+   91  ls
+   92  docker
+   93  docker run hello
+   94  sudo docker run hello
+   95  sudo docker run hello-world
+   96  ls
+   97  clear
+   98  sudo apt purge npm
+   99  sudo apt autoremove
+  100  ls
+  101  rm -rf nextjs-nginx-docker/
+  102  ls
+  103  sudo apt autoclean
+  104  clear
+  105  sudo docker run docker/whalesay cowsay Yay
+  106  sudo docker ps
+  107  sudo docker kill nginx
+  108  sudo docker ps
+  109  sudo docker 
+  110  sudo docker ps
+  111  sudo docker kill 2675a72bc284
+  112  sudo docker ps
+  113  \
+  114  sudo docker ps
+  115  ls
+  116  clear
+  117  sudo docker ps -a
+  118  docker rm *
+  119  sudo docker rm *
+  120  sudo docker ps -a
+  121  sudo docker rm f4f7704d194c
+  122  sudo docker ps -a
+  123  sudo docker rm f7310e86aab5 2675a72bc284
+  124  sudo docker ps -a
+  125  sudo docker ps
+  126  docker images
+  127  sudo docker images
+  128  ls
+  129  clear
+  130  docker pull alpine
+  131  sudo docker pull alpine
+  132  sudo docker pull ubuntu
+  133  sudo docker ps 
+  134  sudo docker version
+  135  ls
+  136  docker run redis
+  137  sudo docker run redis
+  138  sudo docker run -dredis
+  139  sudo docker run -d redis
+  140  sudo docker ps
+  141  sudo docker kill 6e93
+  142  ls
+  143  sudo docker ps
+  144  ls 
+  145  pwd
+  146  git clone https://github.com/gophoenixcs/ownacar_dealer_ui.git
+  147  ls
+  148  cd ownacar_dealer_ui/
+  149  ls
+  150  sudo docker build Dockerfile
+  151  ls
+  152  cd ..
+  153  ls
+  154  cd ownacar_dealer_ui/
+  155  ls
+  156  sudo docker build .
+  157  ls
+  158  clear
+  159  sudo docker ls
+  160  sudo docker ps
+  161  sudo docker build .
+  162  sudo docker ps
+  163  sudo docker ps -a
+  164  sudo docker rm d495672bb274 0dc3d5f40a5b 06fc508a957e 5d8442ad6e66 fba6a3a2fce1 6e93ffb0a350 8c5b123b599b
+  165  sudo docker ps -a
+  166  sudo docker build .
+  167  sudo docker pull ubuntu
+  168  sudo docker build .
+  169  sudo docker ps -a
+  170  sudo docker rm 027
+  171  sudo docker ps -a
+  172  sudo docker build .
+  173  clear
+  174  sudo docker ps -a
+  175  sudo docker rm db 5b e1
+  176  sudo docker ps -a
+  177  sudo docker build .
+  178  git clone https://github.com/gophoenixcs/ownacar_dealer_ui.git
+  179  ls
+  180  nvidia-smi
+  181  cd ..
+  182  ls
+  183  cd ownacar_dealer_ui/
+  184  sudo docker build .
+  185  FROM node:alpine
+  186  # Set working directory
+  187  WORKDIR /usr/app
+  188  # Install PM2 globally
+  189  RUN npm install --global pm2
+  190  # Copy "package.json" and "package-lock.json" before other files
+  191  # Utilise Docker cache to save re-installing dependencies if unchanged
+  192  COPY ./package*.json ./
+  193  # Install dependencies
+  194  RUN npm install --production
+  195  # Copy all files
+  196  COPY ./ ./
+  197  # Build app
+  198  RUN npm run build
+  199  # Expose the listening port
+  200  EXPOSE 3000
+  201  # Run container as non-root (unprivileged) user
+  202  # The "node" user is provided in the Node.js Alpine base image
+  203  USER node
+  204  # Launch app with PM2
+  205  CMD [ "pm2-runtime", "start", "npm", "--", "start" ]
+  206  clear
+  207  sudo docker build .
+  208  reboot
+  209  sudo docker build .
+  210  exit
+  211  git pull
+  212  git checkout master
+  213  ls
+  214  mkdir Code
+  215  cd Code/
+  216  ls
+  217  git clone https://github.com/gophoenixcs/ownacar_dealer_ui.git
+  218  ls
+  219  cd ownacar_dealer_ui/
+  220  ls
+  221  git checkout master
+  222  ls
+  223  clear
+  224  ls
+  225  docker build .
+  226  sudo docker build .
+  227  touch lol
+  228  ls
+  229  sudo docker build .
+  230  clear
+  231  sudo docker build .
+  232  sudo docker ps -a
+  233  sudo docker ps
+  234  sudo docker system prune
+  235  sudo docker build .
+  236  sudo docker images
+  237  sudo docker run 7ae1d94b57f2
+  238  sudo docker run -p 3000:3000 7ae1d94b57f2 
+  239  curl https://localhost:3000
+  240  docker ps -a
+  241  sudo docker ps -a
+  242  sudo docker stop 1820f6055313
+  243  curl http://127.0.0.1:3000
+  244  git status
+  245  git add .
+  246  ls
+  247  git checkout develop
+  248  git status
+  249  git add .
+  250  git status\
+  251  sudo docker build .
+  252  ls
+  253  git checkout master
+  254  sudo docker build .
+  255  sudo docker prune -a
+  256  sudo docker prune
+  257  sudo docker imageprune
+  258  sudo docker image prune
+  259  clear
+  260  exit
+  261  git checkout develop
+  262  ls
+  263  git status
+  264  sudo docker build .
+  265  git checkout master
+  266  ls
+  267  sudo docker build .
+  268  git add .
+  269  git status
+  270  git commit -m "Updated DockerFile"
+  271  git config --global user.email "venkpras92@gmail.com"
+  272  git config --global user.name "Venkatesh Prasad B L"
+  273  git commit -m "Updated DockerFile"
+  274  git push
+  275  git status
+  276  git pull
+  277  git checkout develop
+  278  git pull
+  279  sudo docker ps
+  280  sudo docker image prune -a
+  281  clear
+  282  sudo apt update
+  283  sudo apt upgrade
+  284  pwd
+  285  ls
+  286  cd Code/
+  287  ls
+  288  git clone https://github.com/gophoenixcs/ownacar_ui.git
+  289  cd ..
+  290  ls
+  291  clear
+  292  git clone https://github.com/gophoenixcs/ownacar_ui.git
+  293  ls
+  294  cd ownacar_ui/
+  295  ls
+  296  git checkout master 
+  297  ls
+  298  cd ..
+  299  ls
+  300  history > lol.txt
